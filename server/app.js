@@ -11,7 +11,7 @@ dbconnect()
 
 // Middleware
 app.use(cors({
-  origin: ['http://localhost:3000'],
+  origin: ['http://localhost:3000','https://mern-nk0y.onrender.com'],
   credentials: true,
 }));
 
