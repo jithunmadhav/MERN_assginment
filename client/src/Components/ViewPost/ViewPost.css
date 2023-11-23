@@ -1,0 +1,42 @@
+.main-width{
+    width: 75%;
+    background-color:#f5f7fb !important;
+    border-radius: 5px;
+    margin: 5px;
+    overflow-y: auto;
+}
+.main-width::-webkit-scrollbar {
+    display: none;
+}
+.post-box{
+    position: relative;
+    top: 5%;
+    left: 25%;
+    width: 60%;
+    height: fit-content;
+    border-radius: 5px;
+}
+
+.image-box{
+    height: 600px;
+    object-fit: contain;
+    border-radius: 5px;
+
+}
+.post-caption{
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 10px;
+    color: black;
+}
+.post-description{
+    font-weight: 400;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: -10px;
+    color: black;
+    max-width: 600px;
+
+}
+.hr-width{
+    width: 70%;
+}
