@@ -25,7 +25,7 @@ function ProfileSetting() {
     setTimeout(() => {
       setShowBackdrop(false);
       setshowProfile(true);
-    }, 1000);
+    }, 1400);
   }, []);
 
   const handlelogout = () => {

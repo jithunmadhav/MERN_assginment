@@ -20,7 +20,7 @@ function ViewPost() {
       setTimeout(() => {
         setShowBackdrop(false);
         setshowPost(true);
-      }, 1000);
+      }, 1400);
     }, []);
     const handleEdit=(item)=>{
       console.log(item,'#####');
