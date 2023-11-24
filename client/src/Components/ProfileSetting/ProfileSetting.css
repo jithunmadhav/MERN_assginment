@@ -120,3 +120,12 @@
 .cancel-button:hover{
     background-color: rgb(190, 192, 192);
 }
+@media(max-width:500px){
+    .outer-div{
+  
+        width: 100%;
+        background-color:#f5f7fb;
+        border-radius: 5px;
+        margin: 5px;
+    }
+}
