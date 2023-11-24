@@ -24,6 +24,8 @@ export default function Posts( {setopenHome,setopenPost}) {
                 setopenHome(true)
                 setopenPost(false)
             }
+        }).catch((error)=>{
+          console.log(error);
         })
 
     }
