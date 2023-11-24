@@ -19,7 +19,10 @@ app.use(cors({
 
 app.use('/Public', express.static('Public'));
 app.use(express.json()); // Parse JSON body
-app.use(express.urlencoded({ extended: true })); // Parse URL-encoded bodies
+app.use(express.urlencoded({
+  parameterLimit: 100000,
+  limit: '50mb',
+  extended: true })); // Parse URL-encoded bodies
 app.use(cookieparser());
 app.use(morgan('dev'));
 
