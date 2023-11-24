@@ -29,7 +29,7 @@ export default function UpdatePost( {data,setOpenUpdateBox}) {
     <div className='main-width'>
     <form onSubmit={handleSubmit} className='form-align'>
       <MDBInput id='form4Example1' wrapperClass='mb-4' onChange={(e)=>setcaption(e.target.value)} value={caption} label='Caption' />
-      <MDBFile label='Choose an image' onChange={(e)=>setfiles(e.target.files[0])} id='customFile' style={{ marginBottom:'35px' }}/>      
+      <MDBFile label='Choose an image' onChange={(e)=>setfiles(e.target.files[0])} id='customFile' style={{ marginBottom:'35px' }} accept="image/x-png, image/gif, image/jpeg"/>      
       <MDBTextArea wrapperClass='mb-4' onChange={(e)=>setdescription(e.target.value)} value={description} textarea id='form4Example3' rows={3} label='Description' />
       <MDBBtn type='submit' className='mb-4' block>
         Update

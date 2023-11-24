@@ -5,6 +5,9 @@ import axios from '../../axios';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import imageUrl from '../../imageUrl';
+import Backdrop from '@mui/material/Backdrop';
+import CircularProgress from '@mui/material/CircularProgress';
+
 
 function ProfileSetting() {
   const {user} = useSelector(state =>state)
@@ -16,6 +19,14 @@ function ProfileSetting() {
   const [name, setname] = useState(user?.details?.name)
   const userId=user?.details?._id
   const [files, setfiles] = useState('')
+  const [showBackdrop, setShowBackdrop] = useState(true);
+  const [showProfile, setshowProfile] = useState(false);
+  useEffect(() => {
+    setTimeout(() => {
+      setShowBackdrop(false);
+      setshowProfile(true);
+    }, 1000);
+  }, []);
 
   const handlelogout = () => {
     axios.get('/logout').then((response) => {
@@ -49,6 +60,17 @@ function ProfileSetting() {
   };
 
   return (
+    <>
+    {showBackdrop && (
+        <Backdrop
+          sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
+          open={showBackdrop}
+        >
+          <CircularProgress color="inherit" />
+        </Backdrop>
+      )}
+      {showProfile && (
+    
     <div className='outer-div'>
       <h5 style={{ textAlign: 'center' }}>PROFILE</h5><hr></hr>
       <div className='profile-main-div'>
@@ -83,7 +105,8 @@ function ProfileSetting() {
           }
         </div>
       </div>
-    </div>
+    </div>)}
+    </>
   );
 }
 

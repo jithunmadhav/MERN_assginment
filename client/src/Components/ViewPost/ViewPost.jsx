@@ -4,6 +4,8 @@ import './ViewPost.css'
 import { useSelector } from 'react-redux'
 import imageUrl from '../../imageUrl'
 import UpdatePost from '../Posts/UpdatePost'
+import Backdrop from '@mui/material/Backdrop';
+import CircularProgress from '@mui/material/CircularProgress';
 
 function ViewPost() {
     const {user} = useSelector(state => state)
@@ -12,6 +14,14 @@ function ViewPost() {
     const [openUpdateBox, setOpenUpdateBox] = useState(false)
     const [refresh, setrefresh] = useState(false)
     const [data, setdata] = useState('')
+    const [showBackdrop, setShowBackdrop] = useState(true);
+    const [showPost, setshowPost] = useState(false);
+    useEffect(() => {
+      setTimeout(() => {
+        setShowBackdrop(false);
+        setshowPost(true);
+      }, 1000);
+    }, []);
     const handleEdit=(item)=>{
       console.log(item,'#####');
       setOpenUpdateBox(true)
@@ -35,6 +45,17 @@ function ViewPost() {
  }, [openUpdateBox,refresh])
   return (
     <>
+        {showBackdrop && (
+        <Backdrop
+          sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
+          open={showBackdrop}
+        >
+          <CircularProgress color="inherit" />
+        </Backdrop>
+      )}
+      {showPost && (
+        <>
+    
 {openUpdateBox ? <UpdatePost data={data} setOpenUpdateBox={setOpenUpdateBox}/> :
 <div className='main-width'>
         {
@@ -58,6 +79,8 @@ function ViewPost() {
         }
     </div>
 }
+</>
+)}
     </>
   )
 }
