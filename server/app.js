@@ -11,9 +11,11 @@ dbconnect()
 
 // Middleware
 app.use(cors({
-  origin: ['http://localhost:3000','https://mern-nk0y.onrender.com'],
+  origin: ['http://localhost:3000', 'https://mern-nk0y.onrender.com'],
   credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE','PATCH']
 }));
+
 
 app.use('/Public', express.static('Public'));
 app.use(express.json()); // Parse JSON body
