@@ -41,7 +41,24 @@
 .hr-width{
     width: 90%;
 }
+.empty-div{
+    position: relative;
+    top: 40%;
+    left: 23%;
+    height: 100px;
+}
+.Empty-head{
+    text-align: center;
+    font-size: xx-large;
+    font-family: 'Courier New', Courier, monospace;
+}
 @media(max-width:500px){
+    .empty-div{
+        position: relative;
+        top: 40%;
+        left: 12%;
+        height: 100px;
+    }
     .main-width{
         width: 100%;
         background-color:#f5f7fb !important;

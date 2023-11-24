@@ -120,6 +120,36 @@
 .cancel-button:hover{
     background-color: rgb(190, 192, 192);
 }
+.edit-btn{
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 10px;
+    border: 1px solid black;
+    color: rgb(12, 7, 7);
+    font-size: small;
+    height: 40px;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+.edit-btn:hover{
+    background-color: rgb(190, 192, 192);
+}
+.logout-btn{
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 10px;
+    border: 1px solid black;
+    color: rgb(12, 7, 7);
+    font-size: small;
+    height: 40px;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+.logout-btn:hover{
+    background-color: rgba(255, 0, 0, 0.836);
+}
 @media(max-width:500px){
     .outer-div{
   

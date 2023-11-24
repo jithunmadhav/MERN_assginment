@@ -73,6 +73,7 @@ function Home() {
             setopenHome={setOpenHome}
             setopenPost={setOpenPost}
             setopenProfile={setOpenProfile}
+            setopenhamburger={setopenhamburger}
           />
           {openPost ? (
             <Posts setopenHome={setOpenHome} setopenPost={setOpenPost} />

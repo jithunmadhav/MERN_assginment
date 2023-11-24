@@ -99,7 +99,7 @@ function ProfileSetting() {
             </form>
             </>
           :<>
-          <button onClick={handleEditProfile} className='edit-btn'>Edit <AiFillEdit /></button>
+          <button  onClick={handleEditProfile} className='edit-btn'>Edit <AiFillEdit /></button>
           <button onClick={handlelogout} className='logout-btn'>Logout <AiOutlineLogout /></button>
           </>
           }
